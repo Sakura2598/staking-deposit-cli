@@ -14,7 +14,7 @@ MAINNET = 'mainnet'
 SEPOLIA = 'sepolia'
 HOLESKY = 'holesky'
 MEKONG = 'mekong'
-
+TESTNET = 'testnet'
 # Mainnet setting
 MainnetSetting = BaseChainSetting(
     NETWORK_NAME=MAINNET, GENESIS_FORK_VERSION=bytes.fromhex('00000000'),
@@ -32,12 +32,17 @@ MekongSetting = BaseChainSetting(
     NETWORK_NAME=MEKONG, GENESIS_FORK_VERSION=bytes.fromhex('10637624'),
     GENESIS_VALIDATORS_ROOT=bytes.fromhex('9838240bca889c52818d7502179b393a828f61f15119d9027827c36caeb67db7'))
 
+TestnetSetting = BaseChainSetting(
+    NETWORK_NAME=TESTNET, GENESIS_FORK_VERSION=bytes.fromhex('0x11223300'),
+    GENESIS_VALIDATORS_ROOT=bytes.fromhex('0x459dd7c2100a1889872b23aeb78a6f9c25333d2e760050638c398621c136fece'))
+
 
 ALL_CHAINS: Dict[str, BaseChainSetting] = {
     MAINNET: MainnetSetting,
     SEPOLIA: SepoliaSetting,
     HOLESKY: HoleskySetting,
     MEKONG: MekongSetting,
+    TESTNET: TestnetSetting
 }
 
 
