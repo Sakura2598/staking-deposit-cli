@@ -34,7 +34,7 @@ MekongSetting = BaseChainSetting(
 
 TestnetSetting = BaseChainSetting(
     NETWORK_NAME=TESTNET, GENESIS_FORK_VERSION=bytes.fromhex('11223300'),
-    GENESIS_VALIDATORS_ROOT=bytes.fromhex('0x459dd7c2100a1889872b23aeb78a6f9c25333d2e760050638c398621c136fece'))
+    GENESIS_VALIDATORS_ROOT=bytes.fromhex('459dd7c2100a1889872b23aeb78a6f9c25333d2e760050638c398621c136fece'))
 
 
 ALL_CHAINS: Dict[str, BaseChainSetting] = {
