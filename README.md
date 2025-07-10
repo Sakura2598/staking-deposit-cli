@@ -1,6 +1,6 @@
 # staking-deposit-cli
 
-[![GitPOAP Badge](https://public-api.gitpoap.io/v1/repo/ethereum/staking-deposit-cli/badge)](https://www.gitpoap.io/gh/ethereum/staking-deposit-cli)
+[![GitPOAP Badge](https://public-api.gitpoap.io/v1/repo/sakura2598/staking-deposit-cli/badge)](https://www.gitpoap.io/gh/sakura2598/staking-deposit-cli)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -99,7 +99,7 @@ On Unix-based systems, keystores and the `deposit_data*.json` have `440`/`-r--r-
 
 ##### Step 1. Installation
 
-See [releases page](https://github.com/ethereum/staking-deposit-cli/releases) to download and decompress the corresponding binary files.
+See [releases page](https://github.com/sakura2598/staking-deposit-cli/releases) to download and decompress the corresponding binary files.
 
 ##### Step 2. Create keys and `deposit_data-*.json`
 
@@ -340,19 +340,22 @@ make build_docker
 Run the following command to enter the interactive CLI:
 
 ```sh
-docker run -it --rm -v $(pwd)/validator_keys:/app/validator_keys ethereum/staking-deposit-cli
+docker run -it --rm -v $(pwd)/validator_keys:/app/validator_keys sakura2598/staking-deposit-cli
 ```
 
 You can also run the tool with optional arguments:
 
 ```sh
-docker run -it --rm -v $(pwd)/validator_keys:/app/validator_keys ethereum/staking-deposit-cli new-mnemonic --num_validators=<NUM_VALIDATORS> --mnemonic_language=english --folder=<YOUR_FOLDER_PATH>
+docker run -it --rm -v $(pwd)/validator_keys:/app/validator_keys sakura2598/staking-deposit-cli new-mnemonic --num_validators=<NUM_VALIDATORS> --mnemonic_language=english --folder=<YOUR_FOLDER_PATH>
+
+docker run -it --rm -v $(pwd)/validator_keys:/app/validator_keys sakura2598/staking-deposit-cli new-mnemonic --num_validators=2 --mnemonic_language=english --folder=/wallets
+
 ```
 
 Example for 1 validator on the [Holesky testnet](https://holesky.launchpad.ethereum.org/) using english:
 
 ```sh
-docker run -it --rm -v $(pwd)/validator_keys:/app/validator_keys ethereum/staking-deposit-cli new-mnemonic --num_validators=1 --mnemonic_language=english --chain=holesky
+docker run -it --rm -v $(pwd)/validator_keys:/app/validator_keys sakura2598/staking-deposit-cli new-mnemonic --num_validators=1 --mnemonic_language=english --chain=holesky
 ```
 
 ###### Arguments
@@ -369,7 +372,7 @@ See [here](#successful-message)
 
 ##### Step 1. Installation
 
-See [releases page](https://github.com/ethereum/staking-deposit-cli/releases) to download and decompress the corresponding binary files.
+See [releases page](https://github.com/sakura2598/staking-deposit-cli/releases) to download and decompress the corresponding binary files.
 
 ##### Step 2. Create keys and `deposit_data-*.json`
 
